@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html>
+<head>
+    <link rel="icon" href="/img/weather.png" />
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <img class="portrait" src="./img/robot.png" />
+        <p>page is created by:  {{name}}</p>
+
+        <form>
+            <input placeholder="Location" />
+            <button>Submit</button>
+        </form><br><br>
+        
+        <h2 id="getLocation"></h2>
+        <h2 id="getForecast"></h2>
+    </div>
+
+    {{>footer}}
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
