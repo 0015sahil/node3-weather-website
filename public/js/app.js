@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (e) => {
     document.getElementById('getLocation').innerHTML = 'Loading...';
     document.getElementById('getForecast').innerHTML = '';
 
-    fetch('http://localhost:3001/weather?address=' + location).then(response => {
+    fetch('/weather?address=' + location).then(response => {
     response.json().then(data => {
         if (data.error) {
             document.getElementById('getLocation').innerHTML = 'Location not found....'

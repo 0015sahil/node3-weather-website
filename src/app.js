@@ -3,6 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
+const port = process.env.PORT || 3001
 
 const app = express();
 
@@ -117,6 +118,6 @@ app.get('*', (req, res) => {
 
 
 // Start Server
-app.listen(3001, ()=> {
-    console.log('Port 3001 is running successfully...');
+app.listen(port, ()=> {
+    console.log('Port' + port + 'is running successfully...');
 });
