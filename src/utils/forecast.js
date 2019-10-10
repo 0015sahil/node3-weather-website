@@ -11,7 +11,9 @@ const forecast = (longitude,latitude, callback) => {
         } else {
             callback(undefined, body.daily.data[0].summary + ' It is currently ' 
             + body.currently.temperature + ' degree out. There is ' 
-            + body.currently.precipProbability + '% chance of rain' );
+            + body.currently.precipProbability + '% chance of rain. '
+            + 'Minnimum Tempreture is ' + body.daily.data[0].temperatureMin  
+            + '. Maximum Tempreture is ' + body.daily.data[0].temperatureMax );
         }
     })
 }
